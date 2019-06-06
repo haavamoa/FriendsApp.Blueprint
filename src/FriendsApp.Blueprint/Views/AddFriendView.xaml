@@ -1,0 +1,35 @@
+﻿<?xml version="1.0"
+      encoding="UTF-8" ?>
+
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FriendsApp.Blueprint.Views.AddFriendView"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:dblend="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:ViewModels="clr-namespace:FriendsApp.Blueprint.ViewModels;assembly=FriendsApp.Blueprint"
+             xmlns:Localization="clr-namespace:FriendsApp.Blueprint.Resources.Localization;assembly=FriendsApp.Blueprint"
+             mc:Ignorable="dblend"
+             dblend:DataContext="{dblend:DesignInstance ViewModels:MainViewModel}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <Label Grid.Column="0"
+               Grid.Row="0"
+               Text="{x:Static Localization:LocalizedStrings.AddFriend}" />
+        <Entry Grid.Column="0"
+               Grid.Row="1"
+               Text="{Binding NewFriendName}"
+               Placeholder="{x:Static Localization:LocalizedStrings.Name}" />
+        <Button Grid.Column="1"
+                Grid.Row="1"
+                Text="{x:Static Localization:LocalizedStrings.Add}"
+                Command="{Binding AddNewFriendCommand}" />
+    </Grid>
+</ContentView>

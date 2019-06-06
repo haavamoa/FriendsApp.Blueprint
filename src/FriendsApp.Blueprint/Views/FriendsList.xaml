@@ -1,0 +1,29 @@
+﻿<?xml version="1.0"
+      encoding="UTF-8" ?>
+
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:dblend="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:ViewModels="clr-namespace:FriendsApp.Blueprint.ViewModels;assembly=FriendsApp.Blueprint"
+             xmlns:Localization="clr-namespace:FriendsApp.Blueprint.Resources.Localization;assembly=FriendsApp.Blueprint"
+             mc:Ignorable="dblend"
+             dblend:DataContext="{dblend:DesignInstance ViewModels:MainViewModel}"
+             x:Class="FriendsApp.Blueprint.Views.FriendsList">
+    <Grid>
+        <ListView ItemsSource="{Binding Friends}"
+                  SeparatorVisibility="Default"
+                  BackgroundColor="{StaticResource AppBackgroundColorDarker}"
+                  Header="{x:Static Localization:LocalizedStrings.Friends}"
+                  >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Label Text="{Binding Name}" />
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</ContentView>

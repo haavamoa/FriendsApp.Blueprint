@@ -1,4 +1,5 @@
 ﻿using System;
+using FriendsApp.Blueprint.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 

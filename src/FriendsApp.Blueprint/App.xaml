@@ -6,6 +6,11 @@
              mc:Ignorable="d"
              x:Class="FriendsApp.Blueprint.App">
     <Application.Resources>
-
+        <Color x:Key="AppBackgroundColor">#e3dece</Color>
+        <Color x:Key="AppBackgroundColorDarker">#d0c7ae</Color>
+        <Color x:Key="iOSNavigationBarColor">WhiteSmoke</Color>
+        <Color x:Key="AndroidNavigationBarColor">#2196F3</Color>
+        <Color x:Key="iOSNavigationBarTextColor">Black</Color>
+        <Color x:Key="AndroidNavigationBarTextColor">White</Color>
     </Application.Resources>
 </Application>
