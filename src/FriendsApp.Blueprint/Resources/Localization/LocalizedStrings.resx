@@ -123,10 +123,16 @@
   <data name="AddFriend" xml:space="preserve">
     <value>Add friend</value>
   </data>
+  <data name="ChangeButtonStyle" xml:space="preserve">
+    <value>Change button style</value>
+  </data>
   <data name="Friends" xml:space="preserve">
     <value>Friends</value>
   </data>
   <data name="Name" xml:space="preserve">
     <value>Name</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>Remove</value>
   </data>
 </root>

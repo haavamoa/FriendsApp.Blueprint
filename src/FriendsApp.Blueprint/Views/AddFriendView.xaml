@@ -1,7 +1,4 @@
-﻿<?xml version="1.0"
-      encoding="UTF-8" ?>
-
-<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+﻿<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FriendsApp.Blueprint.Views.AddFriendView"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
@@ -18,18 +15,18 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width=".3*"/>
         </Grid.ColumnDefinitions>
-        <Label Grid.Column="0"
-               Grid.Row="0"
-               Text="{x:Static Localization:LocalizedStrings.AddFriend}" />
         <Entry Grid.Column="0"
                Grid.Row="1"
                Text="{Binding NewFriendName}"
-               Placeholder="{x:Static Localization:LocalizedStrings.Name}" />
+               Placeholder="{x:Static Localization:LocalizedStrings.Name}"
+               />
         <Button Grid.Column="1"
                 Grid.Row="1"
                 Text="{x:Static Localization:LocalizedStrings.Add}"
-                Command="{Binding AddNewFriendCommand}" />
+                Command="{Binding AddNewFriendCommand}"
+                Style="{DynamicResource ButtonStyle}"
+                />
     </Grid>
 </ContentView>

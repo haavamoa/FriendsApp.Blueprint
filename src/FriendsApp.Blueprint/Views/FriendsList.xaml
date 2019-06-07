@@ -1,7 +1,4 @@
-﻿<?xml version="1.0"
-      encoding="UTF-8" ?>
-
-<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+﻿<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -14,13 +11,26 @@
     <Grid>
         <ListView ItemsSource="{Binding Friends}"
                   SeparatorVisibility="Default"
+                  SelectionMode="None"
                   BackgroundColor="{StaticResource AppBackgroundColorDarker}"
-                  Header="{x:Static Localization:LocalizedStrings.Friends}"
-                  >
+                  Header="{x:Static Localization:LocalizedStrings.Friends}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Label Text="{Binding Name}" />
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width=".3*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0"
+                                   Text="{Binding Name}"
+                                   VerticalOptions="Center" />
+                            <Button Grid.Column="1"
+                                    Command="{Binding RemoveFriendCommand}"
+                                    Style="{DynamicResource ButtonStyle}"
+                                    VerticalOptions="Center"
+                                    Text="{x:Static Localization:LocalizedStrings.Remove}"/>
+                        </Grid>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>

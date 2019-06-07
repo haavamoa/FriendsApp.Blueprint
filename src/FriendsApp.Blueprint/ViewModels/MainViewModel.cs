@@ -2,11 +2,12 @@
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
+using FriendsApp.Blueprint.ViewModels.Interfaces;
 using Xamarin.Forms;
 
 namespace FriendsApp.Blueprint.ViewModels
 {
-    public class MainViewModel : INotifyPropertyChanged
+    public class MainViewModel : INotifyPropertyChanged, IHandleFriends
     {
         private string m_newFriendName;
 
@@ -35,7 +36,7 @@ namespace FriendsApp.Blueprint.ViewModels
 
         private void AddNewFriend()
         {
-            var newFriend = new FriendViewModel(NewFriendName);
+            var newFriend = new FriendViewModel(NewFriendName, this);
             Friends.Add(newFriend);
             NewFriendName = string.Empty;
         }
@@ -43,6 +44,11 @@ namespace FriendsApp.Blueprint.ViewModels
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        public void RemoveFriend(FriendViewModel friend)
+        {
+            Friends.Remove(friend);
         }
     }
 }

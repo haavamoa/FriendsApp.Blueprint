@@ -1,7 +1,4 @@
-﻿<?xml version="1.0"
-      encoding="utf-8" ?>
-
-<ContentPage x:Class="FriendsApp.Blueprint.Views.MainPage"
+﻿<ContentPage x:Class="FriendsApp.Blueprint.Views.MainPage"
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:Blueprint="clr-namespace:FriendsApp.Blueprint;assembly=FriendsApp.Blueprint"
@@ -10,15 +7,22 @@
              xmlns:dblend="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:ViewModels="clr-namespace:FriendsApp.Blueprint.ViewModels;assembly=FriendsApp.Blueprint"
              xmlns:views="clr-namespace:FriendsApp.Blueprint.Views"
+             xmlns:Localization="clr-namespace:FriendsApp.Blueprint.Resources.Localization;assembly=FriendsApp.Blueprint"
              mc:Ignorable="dblend"
              Title="FriendsApp"
-             dblend:DataContext="{dblend:DesignInstance ViewModels:MainViewModel}">
+             dblend:DataContext="{dblend:DesignInstance ViewModels:MainViewModel}"
+             >
     <Grid Padding="5">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <views:AddFriendView Grid.Row="0" />
         <views:FriendsList Grid.Row="1" />
+        <Button Grid.Row="2"
+                Text="{x:Static Localization:LocalizedStrings.ChangeButtonStyle}"
+                Clicked="ChangeButtonStyle"
+                Style="{DynamicResource ButtonStyle}" />
     </Grid>
 </ContentPage>

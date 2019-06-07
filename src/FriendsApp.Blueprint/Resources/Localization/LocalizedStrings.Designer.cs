@@ -79,6 +79,15 @@ namespace FriendsApp.Blueprint.Resources.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Change button style.
+        /// </summary>
+        public static string ChangeButtonStyle {
+            get {
+                return ResourceManager.GetString("ChangeButtonStyle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Friends.
         /// </summary>
         public static string Friends {
@@ -93,6 +102,15 @@ namespace FriendsApp.Blueprint.Resources.Localization {
         public static string Name {
             get {
                 return ResourceManager.GetString("Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remove.
+        /// </summary>
+        public static string Remove {
+            get {
+                return ResourceManager.GetString("Remove", resourceCulture);
             }
         }
     }
