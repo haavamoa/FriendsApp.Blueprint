@@ -120,6 +120,9 @@
   <data name="AddButtonLabel" xml:space="preserve">
     <value>Add</value>
   </data>
+  <data name="ChangeStyleButtonText" xml:space="preserve">
+    <value>Change Style</value>
+  </data>
   <data name="FriendsListHeader" xml:space="preserve">
     <value>Friends</value>
   </data>

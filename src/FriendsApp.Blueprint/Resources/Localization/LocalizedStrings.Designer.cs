@@ -70,6 +70,15 @@ namespace FriendsApp.Blueprint.Resources.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Change Style.
+        /// </summary>
+        public static string ChangeStyleButtonText {
+            get {
+                return ResourceManager.GetString("ChangeStyleButtonText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Friends.
         /// </summary>
         public static string FriendsListHeader {

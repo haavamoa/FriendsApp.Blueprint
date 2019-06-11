@@ -120,6 +120,9 @@
   <data name="AddButtonLabel" xml:space="preserve">
     <value>Legg til</value>
   </data>
+  <data name="ChangeStyleButtonText" xml:space="preserve">
+    <value>Endre stil</value>
+  </data>
   <data name="FriendsListHeader" xml:space="preserve">
     <value>Venner</value>
   </data>

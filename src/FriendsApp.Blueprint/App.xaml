@@ -6,6 +6,21 @@
              mc:Ignorable="d"
              x:Class="FriendsApp.Blueprint.App">
     <Application.Resources>
+        <!-- Base button style -->
+        <Style x:Key="ButtonStyle" TargetType="Button">
+            <Setter Property="CornerRadius" Value="10"/>
+        </Style>
 
+        <!-- Lighter button style -->
+        <Style x:Key="LightButtonStyle" TargetType="Button" BasedOn="{StaticResource ButtonStyle}">
+            <Setter Property="BackgroundColor" Value="#c7c0d8"/>
+            <Setter Property="TextColor" Value="Black"/>
+        </Style>
+
+        <!-- Dark button style -->
+        <Style x:Key="NormalButtonStyle" TargetType="Button" BasedOn="{StaticResource ButtonStyle}">
+            <Setter Property="BackgroundColor" Value="#6b5b95"/>
+            <Setter Property="TextColor" Value="White"/>
+        </Style>
     </Application.Resources>
 </Application>

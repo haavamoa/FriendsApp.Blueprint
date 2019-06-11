@@ -21,5 +21,20 @@ namespace FriendsApp.Blueprint
             InitializeComponent();
             BindingContext = new MainViewModel();
         }
+
+        private void ChangeStyle(object sender, EventArgs e)
+        {
+            if (!IsUsingNormalStyle)
+            {
+                ((App)Application.Current).Resources["ButtonStyle"] = ((App)Application.Current).Resources["NormalButtonStyle"];
+            }
+            else
+            {
+                ((App)Application.Current).Resources["ButtonStyle"] = ((App)Application.Current).Resources["LightButtonStyle"];
+            }
+            IsUsingNormalStyle = !IsUsingNormalStyle;
+        }
+
+        private bool IsUsingNormalStyle { get; set; } = true;
     }
 }

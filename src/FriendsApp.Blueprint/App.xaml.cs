@@ -16,6 +16,7 @@ namespace FriendsApp.Blueprint
         protected override void OnStart()
         {
             // Handle when your app starts
+            Resources["ButtonStyle"] = Resources["NormalButtonStyle"];
         }
 
         protected override void OnSleep()

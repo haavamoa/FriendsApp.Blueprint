@@ -15,6 +15,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
             <Grid.ColumnDefinitions>
@@ -24,12 +25,17 @@
             <Entry Grid.Column="0"
                    Text="{Binding NewFriendName}" />
             <Button Grid.Column="1"
+                    Style="{DynamicResource ButtonStyle}"
                     Text="{x:Static Localization:LocalizedStrings.AddButtonLabel}"
                     Command="{Binding AddNewFriendCommand}" />
         </Grid>
         <ListView Grid.Row="1"
                   Header="{x:Static Localization:LocalizedStrings.FriendsListHeader}"
                   ItemsSource="{Binding Friends}" />
+        <Button Grid.Row="2"
+                Style="{DynamicResource ButtonStyle}"
+                Text="{x:Static Localization:LocalizedStrings.ChangeStyleButtonText}"
+                Clicked="ChangeStyle"/>
     </Grid>
 
 </ContentPage>
