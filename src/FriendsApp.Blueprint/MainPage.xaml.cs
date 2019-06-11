@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FriendsApp.Blueprint.ViewModels;
 using Xamarin.Forms;
 
 namespace FriendsApp.Blueprint
@@ -15,18 +16,10 @@ namespace FriendsApp.Blueprint
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
-        private ObservableCollection<string> m_friendsNames;
-
         public MainPage()
         {   
             InitializeComponent();
-            m_friendsNames = new ObservableCollection<string>();
-            FriendsListView.ItemsSource = m_friendsNames;
-        }
-
-        private void AddButton_OnClicked(object sender, EventArgs e)
-        {
-            m_friendsNames.Add(FriendNameEntry.Text);
+            BindingContext = new MainViewModel();
         }
     }
 }
