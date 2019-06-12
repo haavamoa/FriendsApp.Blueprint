@@ -1,4 +1,5 @@
 ﻿using System;
+using LightInject;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -9,8 +10,9 @@ namespace FriendsApp.Blueprint
         public App()
         {
             InitializeComponent();
-
-            MainPage = new MainPage();
+            var container = new ServiceContainer(new ContainerOptions(){EnablePropertyInjection = false});
+            container.RegisterFrom<CompositionRoot>();
+            MainPage = container.GetInstance<MainPage>();
         }
 
         protected override void OnStart()

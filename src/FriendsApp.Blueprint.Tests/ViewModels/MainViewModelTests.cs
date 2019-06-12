@@ -6,14 +6,9 @@ using Xunit;
 
 namespace FriendsApp.Blueprint.Tests.ViewModels
 {
-    public class MainViewModelTests
+    public class MainViewModelTests : TestBase
     {
-        private readonly MainViewModel m_cut;
-
-        public MainViewModelTests()
-        {
-            m_cut = new MainViewModel();    
-        }
+        private readonly IMainViewModel m_cut;
 
         [Fact]
         public void AddNewFriendCommand_NewFriendNameIsSet_NewFriendNameIsAdded()

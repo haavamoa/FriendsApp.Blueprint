@@ -16,10 +16,10 @@ namespace FriendsApp.Blueprint
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
-        public MainPage()
+        public MainPage(IMainViewModel mainViewModel)
         {   
             InitializeComponent();
-            BindingContext = new MainViewModel();
+            BindingContext = mainViewModel;
         }
     }
 }

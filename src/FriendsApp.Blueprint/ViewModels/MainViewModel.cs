@@ -7,10 +7,13 @@ using Xamarin.Forms;
 
 namespace FriendsApp.Blueprint.ViewModels
 {
-    public class MainViewModel : INotifyPropertyChanged
+    public class MainViewModel : IMainViewModel, INotifyPropertyChanged
     {
-        public MainViewModel()
+        private readonly IFriendsService m_friendsService;
+
+        public MainViewModel(IFriendsService friendsService)
         {
+            m_friendsService = friendsService;
             Friends = new ObservableCollection<string>();
             AddNewFriendCommand = new Command(AddNewFriend);
         }
