@@ -1,8 +1,10 @@
 ﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using FriendsApp.Blueprint.Annotations;
+using FriendsApp.Blueprint.Services;
 using Xamarin.Forms;
 
 namespace FriendsApp.Blueprint.ViewModels
@@ -26,6 +28,10 @@ namespace FriendsApp.Blueprint.ViewModels
         }
 
         public string NewFriendName { get; set; }
+        public async Task Initialize()
+        {
+            await m_friendsService.GetFriends();
+        }
 
         public ObservableCollection<string> Friends { get; }
 

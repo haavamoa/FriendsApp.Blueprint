@@ -1,11 +1,11 @@
 {
   "friends": [
-    { "name": "John" },
-    {"name" :  "Sarah" },
-    {"name" :  "Clark" },
-    {"name" :  "William" },
-    {"name" :  "Jessica" },
-    {"name" :  "Jennifer" },
-    {"name" :  "Connor" }
+    "John",
+    "Sarah",
+    "Clark",
+    "William",
+    "Jessica",
+    "Jennifer",
+    "Connor"
   ]
 }

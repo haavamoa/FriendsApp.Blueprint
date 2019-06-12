@@ -1,4 +1,6 @@
-﻿using FriendsApp.Blueprint.ViewModels;
+﻿using System.Net.Http;
+using FriendsApp.Blueprint.Services;
+using FriendsApp.Blueprint.ViewModels;
 using LightInject;
 
 namespace FriendsApp.Blueprint
@@ -7,6 +9,8 @@ namespace FriendsApp.Blueprint
     {
         public void Compose(IServiceRegistry serviceRegistry)
         {
+            serviceRegistry.Register<HttpClient>();
+            serviceRegistry.Register<IFriendsService, FriendsService>();
             serviceRegistry.Register<IMainViewModel, MainViewModel>();
             serviceRegistry.Register<MainPage>();
         }
