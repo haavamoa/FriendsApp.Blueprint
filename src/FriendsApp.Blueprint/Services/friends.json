@@ -1,11 +1,9 @@
-{
-  "friends": [
-    "John",
-    "Sarah",
-    "Clark",
-    "William",
-    "Jessica",
-    "Jennifer",
-    "Connor"
-  ]
-}
+[
+  "John",
+  "Sarah",
+  "Clark",
+  "William",
+  "Jessica",
+  "Jennifer",
+  "Connor"
+]

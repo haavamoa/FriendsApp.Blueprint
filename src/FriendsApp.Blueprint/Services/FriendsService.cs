@@ -25,7 +25,7 @@ namespace FriendsApp.Blueprint.Services
                 if (response.IsSuccessStatusCode)
                 {
                     var content = await response.Content.ReadAsStringAsync();
-                    var friendsModels = JsonConvert.DeserializeObject<List<Friend>>(content);
+                    var friendsModels = JsonConvert.DeserializeObject<List<string>>(content);
                 }
                 return new List<string>();
             }
@@ -46,10 +46,5 @@ namespace FriendsApp.Blueprint.Services
         {
             throw new System.NotImplementedException();
         }
-    }
-
-    public class Friend
-    {
-        public string Name { get; set; }
     }
 }
